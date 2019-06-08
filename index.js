@@ -16,7 +16,7 @@ function addToCart(itemName) {
   item['itemPrice'] = itemPrice;
   item['itemName'] = itemName
   cart.push(item);
-  console.log(`${itemName} has been added to your cart.`)
+  return (`${itemName} has been added to your cart.`)
   return cart;
 }
 
