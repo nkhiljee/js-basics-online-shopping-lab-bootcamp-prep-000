@@ -10,11 +10,29 @@ function setCart(c) {
 }
 
 function addToCart(item) {
- // write your code here
+// write youonlr code here
+  var itemPrice = Math.floor((Math.random() * 100) + 1);
+  var itemName = {};
+  itemName[item] = itemPrice;
+  cart.push(itemName);
+  console.log(`${item} has been added to your cart.`)
+  return cart;
 }
 
 function viewCart() {
   // write your code here
+  if (cart.length === 0) {
+    console.log("Your shopping cart is empty.")
+  }
+  else {
+  var loop = [];
+  for (let i = 0; i < cart.length; i++) {
+    for (var item in cart[i]) {
+      loop.push(`${itemName} at $${itemPrice}`)
+    }
+  }
+  console.log(`In your cart, you have ${loop.join(", ")}.`)
+  }
 }
 
 function total() {
@@ -28,3 +46,6 @@ function removeFromCart(item) {
 function placeOrder(cardNumber) {
   // write your code here
 }
+
+
+
